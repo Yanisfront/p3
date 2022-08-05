@@ -1,0 +1,96 @@
+/*fonctionnement*/
+
+@import "../utils/couleurs.scss";
+@import "../utils/mixins.scss";
+
+
+.fonctionnement {
+
+    counter-reset: steps;
+    padding: 1.8em 1em;  
+    @media (min-width: 767px) {
+        display: flex;
+        flex-wrap: wrap;     
+              
+        justify-content: space-evenly;
+
+        & .icon {
+            width: 20em;
+        }
+        
+    }
+& h2 {
+    margin: 0;
+    padding-top: 1em;
+    padding-left: 0.2em;
+    width: 100%;
+    text-align: left; 
+    @media (min-width: 767px) {
+        text-align: center;
+     }
+    }
+
+    & p {
+        font-weight:500;
+       
+    }
+    
+    
+} 
+
+
+.icon {
+    width: 95%;    
+
+    @media  (min-width:500px) and (max-width:767px) {
+       
+        width: 25em;
+        margin-right:auto ;
+        margin-left: auto;
+        
+         
+     }
+        
+
+    &::before {
+        content: counter(steps);
+        counter-increment: steps;
+        color: white;
+        background-color: $colorprimaire;
+        /*padding: auto;*/
+        border-radius: 45em;
+        height: 1.5em;
+        width:  1.5em;
+        display: grid;
+        place-items: center;
+        position: absolute; 
+        left: -0.8em;
+    }
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 2em 1em 2em 1em;
+    justify-content: flex-start;
+    border-radius: 1em;
+    background-color: $colorbackground-;
+    @include shadow-base;
+   
+   
+    &:hover {
+        .iconcolor {
+            color: $colorprimaire;
+          }
+        background-color:#e4d5f6;
+      
+        @include shadow-opacify;
+    
+    }
+    
+}
+
+.iconcolor {
+    color: $colorteste-;
+    margin: 0.1em 1em 0.1em 1.5em;
+    font-size: 1.3em;
+    
+}

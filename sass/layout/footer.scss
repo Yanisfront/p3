@@ -1,0 +1,62 @@
+/*footer*/
+
+footer {
+    padding: 1em 0 1.5em 1.2em;
+    background-color: $colorfooter;
+  
+    
+
+   
+    .title__footer {
+       margin: 0.2em 0 0 0;
+        font-size: 1.5em;
+        font-family: 'Shrikhand', sans-serif;
+        font-weight: unset;
+      
+            @media (min-width: 767px) {
+                text-align: center;
+             }     
+     
+    }
+
+   
+    ul { 
+        list-style: none;
+        padding: 0 1.2em 0.8em 0;
+        
+   
+    }
+    
+a {
+        margin: 0;
+        line-height: 1.5;
+        color: white;
+        text-decoration: none;
+        
+
+        &:hover {
+            color: $colortertiaire;
+              }
+        
+    }
+    
+    .marginfooter {
+        margin: 0 0.8em 0 0;
+
+    }
+    .fa-hands-helping {
+        font-size: 0.8em;
+    }
+    
+nav {
+     ul {
+        @media (min-width: 767px) {
+            display: flex;
+            justify-content: center;
+            & li {
+                padding: 0 1em 0 1em;
+            }
+        }
+    } 
+}
+}

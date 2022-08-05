@@ -1,0 +1,29 @@
+/*mixins*/ 
+
+
+@mixin shadow-base {
+    box-shadow: 0 0.2em 0.6em gray;
+}
+@mixin shadow-opacify {
+    box-shadow: 0 0.5em 1em opacify($color: #000000, $amount: 0.8);
+}
+@mixin box_shadow {
+    box-shadow: 0 0.2em 0.6em gray;
+    border-radius: 1em;   
+}
+
+@mixin zoom {
+    &:hover {
+     transform: scale(1.08);
+     transition: transform 300ms;
+ }
+    }
+
+
+    @mixin colorheart {
+
+        background: linear-gradient($colorprimaire, $colorsecondaire);
+        
+    }
+    
+    

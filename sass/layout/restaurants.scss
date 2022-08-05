@@ -1,0 +1,152 @@
+/*restaurants*/
+
+
+.restaurants {
+    background-color: $colorbackground-;
+    
+
+    & h2 {
+        margin: 0;
+        padding: 2em 0 1em 0.8em;
+        width: 100%;
+        text-align: left; 
+        @media (min-width: 768px) {               
+            text-align: center;                    
+         }  
+        }
+}
+
+
+.card_menus {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding:0em 2em 5em 2em;
+    justify-content: center;
+
+    @media  (min-width:892px) and (max-width:1504px) {
+
+       padding-top: 2em;
+       gap: 4em;
+     }
+     @media  (min-width:768px) and (max-width:891px) {
+
+        padding-top: 1em;
+        gap: 2em;
+      }
+    
+
+   
+    
+
+
+    .card_image {
+         width: 100%;
+        height: 10em;
+        border-radius: 1em 1em 0 0;
+        object-fit: cover;
+     }    
+   
+    .new{
+    position: relative;
+
+    }
+    .new::before{
+        content: "Nouveau";
+        position: absolute;
+        background-color: $colortertiaire;
+        height: 2.2em;
+        width: 6em;
+        border-radius: 0.2em;
+        color: darken($color: $colortertiaire, $amount: 38);
+        text-align: center;
+        font-weight: 595 ;
+        display: grid;
+        place-items: center;
+        right: 1em;
+        top: 1em;
+    }
+
+   .menu {
+    height: 15em;
+    flex-grow: 1;
+    width: 21em;
+    min-width: 20em;
+    /*
+    max-width: 21em; */
+    border-radius: 1em 1em 1em 1em;
+    @include shadow-base;
+    @include zoom;
+    text-decoration : none ;
+    color: black ;
+                                                        
+    @media  (min-width:1089px) and (max-width:1504px) {
+       
+       width: 30em; 
+      
+        
+    }
+    @media  (min-width:832px) and (max-width:1088px) {
+       
+        width: 23em; 
+         
+     }
+     @media  (min-width:768px) and (max-width:831px) {
+       
+        width: 21em; 
+        
+         
+     }
+     @media  (min-width:500px) and (max-width:767px) {
+       
+        width: 100%; 
+        margin-right:2em ;
+        margin-left: 2em;
+         
+     }
+                           
+
+    &:hover {
+        background-color: lighten($color: $colorprimaire, $amount: 30);
+        @include shadow-opacify;
+        transform: scale(1.01);
+    
+    }
+    
+
+}  
+
+.description {
+    position: relative;padding: 0.6em 0.5em 1em 0.5em;
+   
+   
+   h3, p {
+        margin: 0;
+        padding: 0.2em 0.5em 0.1em 0.5em;
+        
+    }
+
+    i {
+font-size: 1.5em;
+position: absolute;
+right: 1em;
+top: 25%;
+    }
+}
+
+}
+
+.fa-heart {
+    
+    color: transparent;
+	-webkit-text-stroke-width: 1.9px;
+	-webkit-text-stroke-color: black;
+	cursor: pointer;
+ 
+
+   &:hover {
+   
+   animation: heart 4s;     
+
+    }
+ }
